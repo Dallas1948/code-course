@@ -1,0 +1,16 @@
+title: 'Code '
+description: ghll.a6b8486f-ff07-4e3c-9823-0f07bf495cee
+template:
+  repo: code-template
+  name: code
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
